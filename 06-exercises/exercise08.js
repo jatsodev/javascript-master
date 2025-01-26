@@ -1,6 +1,13 @@
-let distance_earth_moon = 384400;
-let ship_speed = 1225;
 
-let travel_time = distance_earth_moon / ship_speed;
+let scoop = 1.8;
+let cone = 0.5;
+let iceCreamOneScoop = scoop + cone;
+let iceCreamTwoScoops = (scoop * 2) + cone;
+let iceCreamThreeScoops = (scoop * 3) + cone;
 
-console.log("The ship will arrive in " + Math.ceil(travel_time) + " hours");
+let result = `Ice cream pice:
+1 scoop  --- ${iceCreamOneScoop} euros
+2 scoops --- ${iceCreamTwoScoops} euros
+3 scoops --- ${iceCreamThreeScoops} euros`;
+
+console.log(result);

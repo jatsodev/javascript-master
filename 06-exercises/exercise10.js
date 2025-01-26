@@ -1,6 +1,10 @@
-let distance_earth_moon = 384400;
-let ship_speed = 1225;
+//Number of hamburguers eaten
+let victor = 2;
+let pepe = 3;
+let manolo = 6;
 
-let travel_time = distance_earth_moon / ship_speed;
+let totalHamburguers = victor + pepe + manolo;
+let isTrue = victor < pepe;
 
-console.log("The ship will arrive in " + Math.ceil(travel_time) + " hours");
+console.log("Total hamburgues eaten: " + totalHamburguers);
+console.log("Did Victor eat less than Pepe? " + isTrue);
