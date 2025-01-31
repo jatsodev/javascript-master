@@ -79,3 +79,29 @@ console.log(sport);
 // }
 
 // console.log(sport);
+
+//HOISTING
+
+//car = "jeep";
+
+console.log(car);
+
+var car = "ferrari";
+
+console.log(car);
+
+//console.log(moto);
+let moto = "ducati";
+
+//ARROW FUNCTIONS
+
+let newCourse = hours => {
+    console.log("This is a new python course " + hours + " hours")
+};
+
+newCourse(99);
+
+//callback
+setTimeout(() => {
+    console.log("I'm usig a arrow function");
+}, 2000);
