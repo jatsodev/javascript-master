@@ -73,3 +73,55 @@ let listArray = shoppingList.split(",");
 
 console.log(listArray);
 
+//Extract part of a text
+
+let courseTwo = "React Master";
+
+console.log(courseTwo.substring(0,6));
+
+//Concatenate or join text strings
+
+let city = "Mercia";
+let country = "Spain";
+
+let finalPhrase = "My city is " + city + "and my country is " + country ;
+
+finalPhrase = `My city is ${city} and it is in ${country}`;
+
+finalPhrase = "".concat("My city is ", city, " and it is in ", country);
+
+console.log(finalPhrase);
+
+//Check if it starts with a specific word
+
+let phraseTwo = "Welcome to my new programming course";
+
+console.log(
+    phraseTwo.startsWith("Welcome")
+);
+
+//Check if it ends with a specific word
+
+let phraseThree = "Welcome to my new programming course";
+
+console.log(
+    phraseThree.endsWith("course")
+);
+
+//Repeat words
+
+let message = "Javascript rocks!!!! \n";
+
+console.log(
+    message.repeat(10)
+);
+
+//Search text in a string
+
+let myString = "Have you ever seen an UFO?... AN UFO?"
+
+console.log(
+    // myString.search("ever")
+    // myString.match("ever")
+    myString.match(/UFO/g)
+);
