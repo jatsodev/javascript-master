@@ -110,3 +110,38 @@ table.forEach((row, index) => {
 });
 
 document.write("</table>");
+
+//three-dimensional arrays
+console.log("***********************")
+
+let restaurantMenu = [
+    ["Food", "Quantity", "Price", "Size"],
+    ["Pizza", 2, [8, 10,15], ["Small", "Medium", "Large"]],
+    ["Hamburger", 5, [2, 5, 7], ["Small", "Medium", "Large"]],
+    ["Paella", 3, [14, 18, 25], ["Small", "Medium", "Large"]]
+];
+
+for(let menu of restaurantMenu){
+    console.log("--------------");
+
+    console.log(menu);
+
+    if(Array.isArray(menu[2]) && Array.isArray(menu[3])){
+        console.log(menu[0]);
+        for(let index in menu[2]){
+            console.log(menu[2][index], menu[3][index], "euros");
+        }
+    }
+
+    // for(element of menu){
+
+    //     if(Array.isArray(element)){
+    //         for(subElement of element){
+    //             console.log(subElement);
+    //         }
+    //     }else{
+    //         console.log(element);
+    //     }
+        
+    // }
+}
