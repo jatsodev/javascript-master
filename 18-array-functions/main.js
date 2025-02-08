@@ -62,3 +62,24 @@ gadgets.push("smartphone");
 let gadgetsWithA = gadgets.filter(gadget => gadget.includes("a"));
 
 console.log(gadgetsWithA);
+
+//Reduce
+
+// let reduce = gadgets.reduce((total, current) => total + ", " + current);
+let reduce = gadgets.reduce((total, current, index) => {
+
+        let capitalizeTotal = total;
+        console.log(index);
+
+        if(index === 1){
+            capitalizeTotal = total[0].toUpperCase() + total.slice(1).toLowerCase();    
+        }
+        
+        let capitalizeCurrent = current[0].toUpperCase() + current.slice(1).toLowerCase();
+        return capitalizeTotal + ", " + capitalizeCurrent;
+
+        
+    });
+
+console.log(reduce);
+console.log(gadgets);
