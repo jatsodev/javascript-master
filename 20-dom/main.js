@@ -40,4 +40,76 @@ function changeColor(color, radius){
 
 console.log(box.className);
 
+//getElementsByClassName
+let articles = document.getElementsByClassName("article");
+
+console.log(articles);
+
+for(let i = 0; i < articles.length; i++){
+
+    articles[i].classList.add("article-base");
+    //Add more HTML
+    articles[i].innerHTML += "<a href='cemita.com'>Read more...</a>";
+    // articles[i].style.border = "1px solid #ccc";
+    // articles[i].style.margin = "20px";
+    // articles[i].style.padding = "20px";
+
+
+    //Add a DOM node
+    let link = document.createElement("a");
+
+    link.setAttribute("href", "cemita.com");
+    link.setAttribute("target", "_blank");
+    link.style.color = "green";
+
+    let textLink = document.createTextNode("Keep reading...");
+
+    link.append(textLink);
+    articles[i].append(link);
+
+
+    if(i === 0){
+        articles[i].classList.add("yellow-article")
+    }
+
+    if(i === (articles.length - 1)){
+        articles[i].classList.add("last-article");
+
+        articles[i].innerHTML = "<h2>Keep reading more things at cemita.com</h2>"
+    }
+}
+
+
+//getElementsByTagName
+
+let tagsArticle = document.getElementsByTagName("article");
+
+tagsArticle[1].style.backgroundColor = "green";
+tagsArticle[1].style.color = "white";
+
+console.log(tagsArticle[1]);
+
+
+//Advisable: QuerySelector
+
+let sectionArticles = document.querySelector("#articles");
+
+sectionArticles.style.background = "lightblue";
+sectionArticles.style.padding = "40px";
+
+console.log(sectionArticles);
+
+
+//QuerySelectors and classes
+
+let firstArticle = document.querySelector(".article");
+firstArticle.style.borderRadius = "10px";
+
+console.log(firstArticle);
+
+
+
+
+//Advisable: QuerySelectorAll
+
 

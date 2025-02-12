@@ -6,3 +6,21 @@
     text-align: center;
     font-family: Arial;
 }
+
+.article-base{
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+}
+
+.yellow-article{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.last-article{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
