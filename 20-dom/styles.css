@@ -1,0 +1,8 @@
+.little-boxy{
+    background: lightblue;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 35px;
+    text-align: center;
+    font-family: Arial;
+}
