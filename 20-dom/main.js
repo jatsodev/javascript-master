@@ -41,6 +41,8 @@ function changeColor(color, radius){
 console.log(box.className);
 
 //getElementsByClassName
+
+/*
 let articles = document.getElementsByClassName("article");
 
 console.log(articles);
@@ -78,23 +80,23 @@ for(let i = 0; i < articles.length; i++){
         articles[i].innerHTML = "<h2>Keep reading more things at cemita.com</h2>"
     }
 }
-
+*/
 
 //getElementsByTagName
 
 let tagsArticle = document.getElementsByTagName("article");
 
-tagsArticle[1].style.backgroundColor = "green";
-tagsArticle[1].style.color = "white";
+tagsArticle[3].style.backgroundColor = "green";
+tagsArticle[3].style.color = "white";
 
-console.log(tagsArticle[1]);
+console.log(tagsArticle[3]);
 
 
 //Advisable: QuerySelector
 
 let sectionArticles = document.querySelector("#articles");
 
-sectionArticles.style.background = "lightblue";
+// sectionArticles.style.background = "lightblue";
 sectionArticles.style.padding = "40px";
 
 console.log(sectionArticles);
@@ -102,7 +104,7 @@ console.log(sectionArticles);
 
 //QuerySelectors and classes
 
-let firstArticle = document.querySelector(".article");
+let firstArticle = document.querySelector("#articles > .article");
 firstArticle.style.borderRadius = "10px";
 
 console.log(firstArticle);
@@ -111,5 +113,86 @@ console.log(firstArticle);
 
 
 //Advisable: QuerySelectorAll
+
+let articles = document.querySelectorAll("#articles  article");
+
+// console.log(articles);
+
+articles.forEach((article, i) => {
+    // console.log(article);
+    article.classList.add("article-base");
+    //Add more HTML
+    article.innerHTML += "<a href='cemita.com'>Read more...</a>";
+    // articles[i].style.border = "1px solid #ccc";
+    // articles[i].style.margin = "20px";
+    // articles[i].style.padding = "20px";
+
+
+    //Add a DOM node
+    let link = document.createElement("a");
+
+    link.setAttribute("href", "cemita.com");
+    link.setAttribute("target", "_blank");
+    link.style.color = "green";
+
+    let textLink = document.createTextNode("Keep reading...");
+
+    link.append(textLink);
+    article.append(link);
+
+
+    if(i === 0){
+        article.classList.add("yellow-article")
+    }
+
+    if(i === (articles.length - 1)){
+        article.classList.add("last-article");
+
+        article.innerHTML = "<h2>Keep reading more things at cemita.com</h2>"
+    }
+});
+
+
+//Modifications
+
+const card = document.querySelector("#card");
+
+console.log(card);
+
+card.textContent = "New content on my card";
+
+card.innerHTML = "<strong>HTML content of my card</strong>";
+
+card.setAttribute("data-id", 12);
+
+// card.setAttribute("class", "hi ho hu");
+
+console.log(card.getAttribute("data-id"));
+console.log(card.getAttribute("class"));
+
+card.style.border = "1px solid blue";
+card.style.backgroundColor = "steelblue";
+card.style.padding = "30px";
+
+card.classList.add("momo");
+
+card.classList.remove("big");
+card.classList.remove("small");
+
+card.classList.toggle("rounded");
+
+const title = document.createElement("h2");
+
+title.textContent = "This is the card";
+
+// card.append(title);
+// card.appendChild(title);
+
+// card.remove();
+
+card.insertBefore(title, card.firstChild);
+
+// card.querySelector("strong").remove();
+
 
 
