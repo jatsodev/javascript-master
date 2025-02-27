@@ -27,18 +27,34 @@
             <p>Keydown, Keyup and Keypress event:</p>
             <input type="text"  id="field-text">
         </li>
-        <!-- <li>
-            <p>Click event:</p>
-            <button id="happy-button">CLICK ME!!!! :D</button>
+        <li>
+            <p>Submit, input, focus, blur and change event:</p>
+            <form id="super-form">
+                <input type="text" placeholder="Name" id="name"/> <br/>
+                <input type="email" placeholder="Email" id="email"/> <br/>
+                
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select> <br/>
+
+                <input type="submit" value="Send">
+            </form>
         </li>
         <li>
-            <p>Click event:</p>
-            <button id="happy-button">CLICK ME!!!! :D</button>
+            <p>Submit, input, focus, blur and change event:</p>
+            <input type="text" id="clipboard" value="Text ;)">
         </li>
+
         <li>
-            <p>Click event:</p>
-            <button id="happy-button">CLICK ME!!!! :D</button>
-        </li> -->
+            <p>Stop listening click:</p>
+            <button id="happy-button2">CLICK ME ONCE AGAIN!!!! :D</button>
+        </li>
+
+        <li id="parent-box">
+            <p>Propagation:</p>
+            <button id="child-button">Click me!!!!</button>
+        </li>
     </ul>
 </body>
 </html>
