@@ -1,0 +1,29 @@
+.trafic-light{
+    width: 70px;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: rgb(238, 226, 2);
+    border-radius: 5px;
+}
+
+.light{
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    background-color: #ccc;
+    border: 5px solid black;
+}
+
+.red.active{
+    background-color: red;
+}
+
+.yellow.active{
+    background-color: yellow;
+}
+
+.green.active{
+    background-color: green;
+}
