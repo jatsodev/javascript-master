@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="exercise37.js" defer></script>
+    <script src="exercise38.js" defer></script>
 
     <style>
         .info{
             display: none;
-            border: 5px dashed black;
+            border: 4px dashed black;
             padding: 7px;
             margin: 7px;
 
         }
     </style>
 
-    <title>Exercise 37</title>
+    <title>Exercise 38</title>
 </head>
 <body>
-    <h1>Exercise 37</h1>
+    <h1>Exercise 38</h1>
 
     <form action="#" method="post" id="form">
         
         <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"> <br> <br>
+        <input type="text" id="name" name="name"> 
+        <span id="errorName"></span> <br> <br>
 
         <label for="lastName">Last Name:</label><br>
-        <input type="text" id="lastName" name="lastName"> <br> <br>
+        <input type="text" id="lastName" name="lastName"> 
+        <span id="errorLastName"></span> <br> <br>
 
         <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age"> <br> <br>
+        <input type="number" id="age" name="age"> 
+        <span id="errorAge"></span> <br> <br>
 
         <input type="submit" value="Send" id="submit">
 
