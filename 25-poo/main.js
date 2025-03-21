@@ -33,6 +33,10 @@ class Dog {
     set setColor(color){
         this.color = color;
     }
+
+    static greet(){
+        console.log("Hello friend, how are you?");
+    }
 }
 
 
@@ -51,3 +55,32 @@ console.log(myDog2.name);
 
 myDog2.bark();
 myDog2.jump();
+
+Dog.greet();
+
+// myDog.greet(); no objects
+
+class SuperDog extends Dog {
+    constructor (name, breed, color, superPower){
+        super(name, breed, color);
+        this.superPower = superPower;
+    }
+
+    setSuperPower(superPower){
+        this.superPower = superPower;
+    }
+
+    getSuperPower(){
+        return this.superPower;
+    }
+
+    execute(){
+        console.log(`${this.name} is usig his super power of ${this.superPower}.`);
+    }
+}
+
+let superDog = new SuperDog("Laika", "Golden", "Blond", "Searching");
+
+superDog.execute();
+console.log(superDog.getBreed());
+superDog.jump();
